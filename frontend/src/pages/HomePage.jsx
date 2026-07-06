@@ -13,6 +13,19 @@ function HomePage() {
 
   console.log("products", products);
 
+  if (loading) {
+    return (
+      <div
+        data-testid="product-loading"
+        className="min-h-screen flex items-center justify-center bg-[#0a0a0a]"
+      >
+        <span className="font-mono text-xs tracking-[0.3em] text-white/60 uppercase">
+          Loading_System…
+        </span>
+      </div>
+    );
+  }
+
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
